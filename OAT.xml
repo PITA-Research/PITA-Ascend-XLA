@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2026 Huawei Technologies Co., Ltd.
+     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+         http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<configuration>
+    <oatconfig>
+        <licensefile></licensefile>
+        <policylist>
+            <policy name="projectPolicy" desc="">
+                <policyitem type="license" name="Apache License" path=".*" filefilter="defaultPolicyFilter" desc="Licensed under the Apache License, Version 2.0"/>
+                <policyitem type="copyright" name="Huawei Technologies Co., Ltd." path=".*" filefilter="copyrightPolicyFilter" desc="Developed by Huawei Company"/>
+            </policy>
+        </policylist>
+        <filefilterlist>
+            <filefilter name="defaultFilter" desc="Files not to check">
+                <filteritem type="filename" name="BUILD" desc="skip build files"/>
+		        <filteritem type="filename" name="*.npz" desc="skip npz files"/>
+		        <filteritem type="filename" name=".gitmodules" desc="skip gitmodules files"/>
+               		<filteritem type="filename" name="*.png" desc="skip png files"/>
+			<filteritem type="filename" name=".pre-commit-config.yaml" desc="skip pre-commit-config file"/>
+            </filefilter>
+        </filefilterlist>
+        <licensematcherlist>
+            <licensematcher name="Apache License" desc="If the scanning result is InvalidLicense, you can define matching rules here. Note that quotation marks must be escaped.">
+                <licensetext name="
+                    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+                    you may not use this file except in compliance with the License.
+                    You may obtain a copy of the License at
+                        http://www.apache.org/licenses/LICENSE-2.0
+                   Unless required by applicable law or agreed to in writing, software
+                   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+                   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                   See the License for the specific language governing permissions and
+                   limitations under the License.
+				 " desc=""/>
+            </licensematcher>
+        </licensematcherlist>
+    </oatconfig>
+</configuration>

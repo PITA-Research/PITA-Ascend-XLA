@@ -1,0 +1,10 @@
+.idea
+.vscode
+.cache
+__pycache__
+examples/output
+build/*
+!build/build.sh
+compile_commands.json
+auto_fuse_compile_artifacts
+*.npz

@@ -1,0 +1,13 @@
+add_llvm_executable(test_mair_gen
+    test_mair_gen.cc
+)
+llvm_update_compile_flags(test_mair_gen)
+target_link_libraries(test_mair_gen
+    PRIVATE
+        MLIRFunctionInterfaces
+        MLIRFuncDialect
+        MLIRCAPIIR
+        MLIRCAPIArith
+        AirDialect
+        ConvertGraphdef
+)
