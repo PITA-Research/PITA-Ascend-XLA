@@ -1,4 +1,4 @@
-# XLA-NPU
+# PITA-Ascend-XLA
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
@@ -12,14 +12,34 @@ XLA-NPU 是一个面向华为昇腾NPU（Neural Processing Unit）硬件的 XLA�
 
 以下展示各 DEMO 的启动训练示例与最终成果，包含视频及图片素材。
 
-| 演示项目 | 启动训练示例 | 最终成果 |
-| --- | --- | --- |
-| PITA物理引擎训练四足行走DEMO（视频里小狗仅为演示效果） | <video src="docs/train_npu.mp4" controls width="320"></video><br>[查看视频](docs/train_npu.mp4) | <video src="docs/train_npu_RST.mp4" controls width="320"></video><br>[查看视频](docs/train_npu_RST.mp4) |
-| PITA物理引擎系统辨识DEMO | <video src="docs/SysID_demo.mp4" controls width="320"></video><br>[查看视频](docs/SysID_demo.mp4) | [![系统辨识成果：质量收敛、辨识损失与摆杆角度对比](docs/SysID_demo_RST.png)](docs/SysID_demo_RST.png) |
+### 🐕 PITA 物理引擎四足行走 DEMO
+
+> 视频中的小狗仅作为训练效果演示。
+
+**启动训练示例**
+
+https://github.com/user-attachments/assets/74a1d120-d83f-44df-be70-57cc0b68b4be
+
+**最终成果**
+
+https://github.com/user-attachments/assets/9109e71e-6189-4de8-bb6f-92297859d830
+
+
+### 🔬 PITA 物理引擎系统辨识 DEMO
+
+**系统辨识过程**
+
+https://github.com/user-attachments/assets/4bc19061-9149-4855-9582-1d26a85917f3
+
+**最终成果**
+
+[![系统辨识成果：质量收敛、辨识损失与摆杆角度对比](docs/SysID_demo_RST.png)](docs/SysID_demo_RST.png)
 
 ## 总体架构
 
 ![](docs/overview.png "XLA-NPU架构图")<a id="fig1"></a>
+
+
 
 ## 代码结构
 
