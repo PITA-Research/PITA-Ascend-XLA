@@ -8,6 +8,8 @@ XLA-NPU 是一个面向华为昇腾NPU（Neural Processing Unit）硬件的 XLA�
 
 本项目以华为开源的XLA-NPU为基础，首个支持PITA可微物理引擎以及MuJoCo-XLA等以JAX为后端框架的业务线，能够使其顺利高效的运行在以华为CANN技术为基座的昇腾NPU（Neural Processing Unit）。
 
+环境配置、编译安装及 DEMO 训练与推理的复现步骤，请参阅[复现指南](docs/reproduction/README.md)。
+
 ## 演示与成果
 
 以下展示各 DEMO 的启动训练示例与最终成果，包含视频及图片素材。
@@ -51,7 +53,7 @@ https://github.com/user-attachments/assets/4bc19061-9149-4855-9582-1d26a85917f3
 | `stream_executor` | NPU 平台、Stream、Event 和设备内存 |
 | `dependency` | ACL、ACLNN、GE、AFIR 和 NPUIR 接口 |
 | `common` | 配置、常量和通用工具 |
-| `docs` | README 引用的图片和视频素材 |
+| `docs` | 复现指南、技术文档及图片素材 |
 
 ## 支持范围
 
@@ -65,8 +67,8 @@ https://github.com/user-attachments/assets/4bc19061-9149-4855-9582-1d26a85917f3
 
 本项目基于以下开源项目：
 
-- [CANN XLA-NPU](https://gitcode.com/cann/xla-npu)
-- [MJX_PITA](https://github.com/pita-ai/MJX_PITA)
+- [CANN XLA-NPU](https://gitcode.com/cann/xla-npu) - 面向华为昇腾 NPU 的 XLA 后端实现
+- [MJX_PITA](https://github.com/pita-ai/MJX_PITA) - 基于 MJX 的四足机器人 PPO 异构训练框架
 - [OpenXLA](https://github.com/openxla/xla) - XLA 编译器框架
 - [JAX](https://github.com/google/jax) - 高性能数值计算库
 - [StableHLO](https://github.com/openxla/stablehlo) - StableHLO 方言
