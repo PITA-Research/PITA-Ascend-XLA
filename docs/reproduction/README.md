@@ -133,13 +133,41 @@ bash tests/ut/run_fma_addcmul_precision.sh
 
 # MJX\_PITA
 
-1\.训练脚本
+1.仓库有多个分支，先切换到feat_npu分支
 
-```Plain Text
-python src/train.py --exp xg_velocity --max_iteration 5000 --num_envs 4096
+```Plain
+git switch feat_npu
 ```
 
-![image\.png](assets/image%2010.png)
+2.开启训练
+
+```Python
+CANN_ENV="/usr/local/Ascend/cann-9.0.0/set_env.sh"
+XLA_NPU_ROOT="/data/workspace/PITA-Ascend-XLA"
+OPTRY_ENV="/data/workspace/PITA-Ascend-Ops/custom_opp_install/vendors/optry/bin/set_env.bash"
+
+NPU_PYTHON="/usr/local/bin/python3"
+NPU_PJRT_LIBRARY="/data/workspace/PITA-Ascend-XLA/build/code/xla/bazel-bin/xla/xla_npu/pjrt/c/pjrt_c_api_npu_plugin.so"
+XLA_NPU_ENV="/data/workspace/PITA-Ascend-XLA/build/xla_npu_env"
+
+# npu-smi / acl.get_soc_name report Ascend910B2.
+SOC_VERSION="Ascend910B2"
+```
+
+在npu训练前要设置环境，建议创建.env文件并填入以上文件的路径
+
+```Plain
+NPU_ENV_CHECK_ONLY=1
+bash scripts/train.sh --max_iteration 30 --num_envs 32
+```
+
+![image\.png](assets/image13.png)
+
+已在NPU上训练
+
+![image\.png](assets/image14.png)
+
+训练完成
 
 2\.推理
 
